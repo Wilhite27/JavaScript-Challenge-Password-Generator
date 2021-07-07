@@ -4,13 +4,13 @@ var characters2 = ['"0","1","2","3","4","5","6","7","8","9"'];
 var characters3 = ['"!","@","#","$","%","^","&","*","(",")"'];
 function randomPassword() {
   let passStore = parseInt(
-    prompt('How long is your password?')
+    prompt('How many characters do you want in your password?')
   );
   if (isNaN(length) === true) {
-    alert('Input is not valid, please put put a number');
+    alert('Input is not valid, please input put a number');
   };
   if (length < 8) {
-    alert('Password must be 8 chars long');
+    alert('Password must be at least 8 characters long');
     //proceed
   };
   if (length > 128) {
@@ -18,13 +18,13 @@ function randomPassword() {
     return; //proceed
   };
   var regChars = confirm(
-    'Please press ok for lowercase'
+    'Please press ok for lowercase characters'
   );
   var upperChars = confirm(
-    'Please press ok for uppercase'
+    'Please press ok for uppercase characters'
   );
   var numChars = confirm(
-    'Please press ok for numbers'
+    'Please press ok for numerical characters'
   );
   var specChars = confirm(
     'Please press ok for special characters'
@@ -41,7 +41,7 @@ function randomPassword() {
   var passwordSetting = {
     length: length,
     regChars: regChars,
-    uppersChars: uppersChars,
+    upperChars: upperChars,
     numChars: numChars,
     specChars: specChars
   };
