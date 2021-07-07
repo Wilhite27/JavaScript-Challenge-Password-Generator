@@ -6,7 +6,7 @@ function randomPassword() {
   let passStore = parseInt(
     prompt('How long is your password?')
   );
-  if (isNaN((length) === true) {
+  if (isNaN(length) === true) {
     alert('Input is not valid, please put put a number');
   };
   if (length < 8) {
@@ -35,8 +35,8 @@ function randomPassword() {
     numChars === false,
     specChars === false
   ) {
-    alert('must select atleast one character option');
-    return;
+    alert('must select at least one character option');
+    // return;
   }
   var passwordSetting = {
     length: length,
@@ -84,14 +84,14 @@ function genPass() {
   }
   return result.join('');
 }
-var generateBtn = document.querySelector("#generate");
+var generateBtn = document.getElementById(generate).onclick = genPass();
 // Write password to the #password input
 function writePassword() {
   var password = randomPassword();
-  var passwordText = document.querySelector("#password");
+  var passwordText = window.document.querySelector("div.card-body").innerHTML("Hello World");
   passwordText.value = password;
   // return password;  
 }
 // for (var i = 0; i < options.length);
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword());
